@@ -22,10 +22,10 @@
   rr : ra and rb at the same time.   
   <img alt="image" src="https://github.com/leebo155/push_swap/blob/main/img/push_swap3.jpg">
 
-  rra (reverse rotate a): Shift down all elements of stack a by 1. The last element becomes the first one.
-  rrb (reverse rotate b): Shift down all elements of stack b by 1. The last element becomes the first one.
-  rrr : rra and rrb at the same time.
-  <img alt="image" src="https://github.com/leebo155/push_swap/blob/main/img/push_swap4.jpg">
+  rra (reverse rotate a): Shift down all elements of stack a by 1. The last element becomes the first one.   
+  rrb (reverse rotate b): Shift down all elements of stack b by 1. The last element becomes the first one.   
+  rrr : rra and rrb at the same time.   
+  <img alt="image" src="https://github.com/leebo155/push_swap/blob/main/img/push_swap4.jpg">   
   
 ## Makefile
 | Rules | Description |

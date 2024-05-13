@@ -26,6 +26,21 @@
   rrb (reverse rotate b): Shift down all elements of stack b by 1. The last element becomes the first one.   
   rrr : rra and rrb at the same time.   
   <img alt="image" src="https://github.com/leebo155/push_swap/blob/main/img/push_swap4.jpg">   
+
+* When the program starts, proceed with the validation and simplify.   
+  <img alt="image" src="https://github.com/leebo155/push_swap/blob/main/img/push_swap5.jpg">
+
+* Create a stack structure by creating a list of simplified arguments.   
+  <img alt="image" src="https://github.com/leebo155/push_swap/blob/main/img/push_swap6.jpg">
+
+  <img alt="image" src="https://github.com/leebo155/push_swap/blob/main/img/push_swap_flow.jpg">
+  
+  <img alt="image" src="https://github.com/leebo155/push_swap/blob/main/img/push_swap7.jpg">
+  
+  <img alt="image" src="https://github.com/leebo155/push_swap/blob/main/img/push_swap8.jpg">
+  
+  <img alt="image" src="https://github.com/leebo155/push_swap/blob/main/img/push_swap9.jpg">
+  
   
 ## Makefile
 | Rules | Description |

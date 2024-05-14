@@ -2,41 +2,54 @@
  A very simple and a highly straightforward algorithm project: data must be sorted.
 
 ## Introduction
-* The project is to create a program that uses two stacks to sort ascending to `stack a`.
-* The `stack a` contains a random amount of negative and/or positive numbers which cannot be duplicated.
-* The `stack b` is empty.
+* The project is to create a program that uses two stacks to sort ascending to `Stack A`.
+* The `Stack A` contains a random amount of negative and/or positive numbers which cannot be duplicated.
+* The `Stack B` is empty.
 * And must output the commands used as the sort progresses.
 * The commands are as follows.
 
-  sa (swap a): Swap the first 2 elements at the top of stack a. Do nothing if there is only one or no elements.   
-  sb (swap b): Swap the first 2 elements at the top of stack b. Do nothing if there is only one or no elements.   
+  sa (swap `Stack A`): Swap the first 2 elements at the top of stack a. Do nothing if there is only one or no elements.   
+  sb (swap `Stack B`): Swap the first 2 elements at the top of stack b. Do nothing if there is only one or no elements.   
   ss : sa and sb at the same time   
    <img alt="image" src="https://github.com/leebo155/push_swap/blob/main/img/push_swap1.jpg">   
 
-  pa (push a): Take the first element at the top of b and put it at the top of a. Do nothing if b is empty.   
-  pb (push b): Take the first element at the top of a and put it at the top of b. Do nothing if a is empty.   
+  pa (push `Stack A`): Take the first element at the top of b and put it at the top of a. Do nothing if b is empty.   
+  pb (push `Stack B`): Take the first element at the top of a and put it at the top of b. Do nothing if a is empty.   
   <img alt="image" src="https://github.com/leebo155/push_swap/blob/main/img/push_swap2.jpg">   
 
-  ra (rotate a): Shift up all elements of stack a by 1. The first element becomes the last one.   
-  rb (rotate b): Shift up all elements of stack b by 1. The first element becomes the last one.   
+  ra (rotate `Stack A`): Shift up all elements of stack a by 1. The first element becomes the last one.   
+  rb (rotate `Stack B`): Shift up all elements of stack b by 1. The first element becomes the last one.   
   rr : ra and rb at the same time.   
   <img alt="image" src="https://github.com/leebo155/push_swap/blob/main/img/push_swap3.jpg">
 
-  rra (reverse rotate a): Shift down all elements of stack a by 1. The last element becomes the first one.   
-  rrb (reverse rotate b): Shift down all elements of stack b by 1. The last element becomes the first one.   
+  rra (reverse rotate `Stack A`): Shift down all elements of stack a by 1. The last element becomes the first one.   
+  rrb (reverse rotate `Stack B`): Shift down all elements of stack b by 1. The last element becomes the first one.   
   rrr : rra and rrb at the same time.   
   <img alt="image" src="https://github.com/leebo155/push_swap/blob/main/img/push_swap4.jpg">   
 
+## Process
 * When the program starts, proceed with the validation and simplify.   
   <img alt="image" src="https://github.com/leebo155/push_swap/blob/main/img/push_swap5.jpg">
 
 * Create a stack structure by creating a list of simplified arguments.   
   <img alt="image" src="https://github.com/leebo155/push_swap/blob/main/img/push_swap6.jpg">
 
+* The most important part of the sorting algorithm, the segmentation method, is as follows.   
+   Both stacks have special structures that allow them to be quickly accessed in addition to the top.   
+   There are a total of three locations that can be accessed quickly, and elements are checked and put in each location.   
+  <img alt="image" src="https://github.com/leebo155/push_swap/blob/main/img/push_swap10.jpg">   
+
+* Repeat the above segmentation method until it is small enough to sort, which takes approximately N log3(N) of time complexity.   
+  <img alt="image" src="https://github.com/leebo155/push_swap/blob/main/img/push_swap11.jpg">   
+
+* The sorting flowchart using the above segmentation method is as follows.  
   <img alt="image" src="https://github.com/leebo155/push_swap/blob/main/img/push_swap_flow.jpg">
-  
+
+* This is a simple example of 10 elements.
+   Divide until there are no more than three elements in `Stack A` and put them in `Stack B`.   
   <img alt="image" src="https://github.com/leebo155/push_swap/blob/main/img/push_swap7.jpg">
-  
+
+   Sort the remaining elements in `Stack A` and import and sort the elements that were divided into `Stack B`.
   <img alt="image" src="https://github.com/leebo155/push_swap/blob/main/img/push_swap8.jpg">
   
   <img alt="image" src="https://github.com/leebo155/push_swap/blob/main/img/push_swap9.jpg">
